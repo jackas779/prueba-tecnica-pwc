@@ -1,0 +1,279 @@
+:root{
+  --font: Georgia, Serif
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+li {
+  list-style: none;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: auto;
+  padding-top: 10px;
+}
+.header__container{
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-bottom: solid 2px #DDDDDD;
+}
+.header_logo{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5em;
+  height: 3.44em;
+  margin-bottom: 10px;
+  align-self: center;
+}
+.header_logo img{
+  width: 100%;
+  height: 100%;
+}
+
+.header__nav{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-self: flex-end;
+  position: relative;
+}
+
+.header__nav-list{
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+.header__nav-item{
+  padding-top: 2px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+  align-self: flex-end;
+}
+
+.nav-item--list::after{
+  content: '';
+  background-color: black;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: transform .25s ease-in-out;
+}
+
+.nav-item--list:hover::after{
+  transform: scaleY(1);
+}
+
+.header__nav-item::after { 
+  height: 4px;
+}
+
+.header_search{
+  position: absolute;
+  right: 20px;
+}
+.header_search__button::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  mask-image: url('../img/icon/Search-bu.svg');
+  mask-repeat: no-repeat;
+}
+.header_search__button{
+  padding: 0px 30px;
+  background-color: transparent;
+  border: none;
+  font-family: var(--font);
+  font-size: 1.125rem;
+  position: relative;
+}
+
+.header_search__button::after{
+  content: '';
+  background-color: black;
+  width: 47%;
+  height: 2px;
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: transform .25s ease-in-out;
+}
+
+.header_search__button:hover:after{
+  transform: scaleY(1);
+}
+
+.header__nav_segundary-container{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: absolute;
+  right: 50px;
+  top: -28px;
+}
+
+.header__nav_segundary-item{
+  cursor: pointer;
+  position: relative;
+  align-self: flex-end;
+  padding-bottom: 1px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.header__nav_segundary-item::after {
+  height: 2px;
+}
+
+.header__nav_segundary-item.nav--login::before{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -25px;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  mask-image: url('../img/icon/Avatar-bu.svg');
+  mask-repeat: no-repeat;
+}
+
+.header__nav_segundary-location {
+  display: flex;
+  align-items: center;
+  padding-top: 3.5px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.--location::after{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  mask-image: url('../img/icon/Location-bu.svg');
+  mask-repeat: no-repeat;
+}
+
+.--location::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  mask-image: url('../img/icon/Chevron.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.btn{
+  padding: 13px 30px;
+  text-decoration: none;
+  border: solid 1px black;
+  width: fit-content;
+  min-width: min-content;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 24px;
+  position: relative;
+  color: #000;
+  transition: .5s ease-in-out;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.btn:hover{
+  background-color: black;
+  color: white;
+}
+
+.btn::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 19px;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  mask-image: url('../img/icon/Right-Chevron-white.svg');
+  mask-repeat: no-repeat;
+  transition: .8s ease-in-out;
+}
+.btn:hover::after{
+  background-color: white;
+}
+
+.btn--secundary {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #e0301e;
+  color: white;
+  border: none !important;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  transform-origin: left center;
+  gap: 8px;
+}
+
+.btn--secundary span {
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Efecto hover */
+.btn--secundary:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding-right: 25px; 
+}
+
+.btn--secundary:hover span {
+  transform: translateX(-3px); 
+}
+
+.btn--secundary::after {
+  content: '';
+  right: -5px;
+  top: 20px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+
+.btn--secundary:hover::after {
+  right: 2px;
+  background-color: #EB8C00;
+  transform: translateX(30%) ;
+}

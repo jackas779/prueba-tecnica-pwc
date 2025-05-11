@@ -10,6 +10,10 @@ body{
 li {
   list-style: none;
 }
+a{
+  text-decoration: none;
+  color: #000;
+}
 .header{
   display: flex;
   justify-content: center;
@@ -276,4 +280,134 @@ li {
   right: 2px;
   background-color: #EB8C00;
   transform: translateX(30%) ;
+}
+
+
+footer { 
+  max-width: 1338px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.container_navegation{
+  padding: 50px 0;
+  align-self: flex-start;
+}
+
+.container_about{
+  display: flex;
+  width: 100%;
+  gap: 25px;
+  height: 100%;
+  max-height: 336px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container_about :nth-child(1) {
+  max-height: 267px;
+}
+
+.container_about-card{ 
+  border-top: solid 2px black;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.container_about-title h4 a{
+  width: 100%;
+  display: inline-flex;
+  font-style: normal;
+  font-weight: initial;
+  font-size: 1.2em;
+  max-width: 198px;
+}
+
+.container_about-links{
+  display: flex;
+  height: 100%;
+  font-weight: bold;
+  font-size: .86rem;
+  line-height: 1.5em;
+  gap: 20px;
+}
+
+.container_about-links div{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 220px;
+}
+
+.container_about-links a {
+  display: inline-block;
+}
+
+.container_copy_rigth{
+  margin-top: 70px;
+  margin-bottom: 30px;
+  display: flex;
+  position: relative;
+  align-self: flex-start;
+  width: 100%;
+}
+
+
+/* .container_copy_rigth{
+  margin-top: 20px;
+  display: flex;
+  padding: 50px 0 30px 0;
+  align-items: center;
+} */
+
+
+.container_copy_rigth-img{
+  background-image: url("../img/photos/PwC-logo-white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 48px;
+  margin-top: 5px;
+  /* float: left; */
+  width: 72px;
+  height: 55px;
+  margin-top: 18px;
+}
+
+/* .container_copy_rigth-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} */
+
+.container_copy_rigth-copy::after {
+  /* border-top: 1px solid #cbd1d6; */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #cbd1d6;
+}
+
+.container_copy_rigth-copy_p{
+  font-size: .857rem;
+  display: flow-root;
+  line-height: 1.7em;
+  margin: 0 0 10px;
+  max-width: 765px;
+}
+
+.container_copy_rigth-copy_link{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .857rem;
+  vertical-align: baseline;
+  line-height: 1.7em;
+  gap: 10px 40px;
+  max-width: 765px;
 }

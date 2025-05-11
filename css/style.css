@@ -327,6 +327,10 @@ footer {
   max-width: 198px;
 }
 
+.container_about-title h4 a:hover{
+  text-decoration: underline;
+}
+
 .container_about-links{
   display: flex;
   height: 100%;
@@ -345,6 +349,10 @@ footer {
 
 .container_about-links a {
   display: inline-block;
+}
+
+.container_about-links a:hover {
+  text-decoration: underline;
 }
 
 .container_copy_rigth{
@@ -375,6 +383,13 @@ footer {
   width: 72px;
   height: 55px;
   margin-top: 18px;
+  cursor: pointer;
+}
+
+.container_copy_rigth-img a{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* .container_copy_rigth-img img{
@@ -410,4 +425,8 @@ footer {
   line-height: 1.7em;
   gap: 10px 40px;
   max-width: 765px;
+}
+
+.container_copy_rigth-copy_link a:hover {
+  text-decoration: underline;
 }

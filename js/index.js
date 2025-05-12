@@ -2,7 +2,6 @@ const listItems = document.querySelector('.header__nav-list')
 
 // Convertir HTMLCollection a Array para poder usar forEach
 Array.from(listItems.children).forEach(item => {
-  console.log(item);
   item.addEventListener('click', function (e) {
     // Primero remover 'active' de todos los items
     Array.from(listItems.children).forEach(child => {
@@ -14,6 +13,14 @@ Array.from(listItems.children).forEach(item => {
   });
 });
 
+const redirect_news = document.querySelectorAll('.redirect_news')
+console.log(redirect_news);
+
+redirect_news.forEach(item => {
+  item.addEventListener('click', e => {
+    window.location = 'https://www.pwc.com/co/es/publicaciones/ceo-survey-colombia.html'
+  })
+})
 
 // document.querySelector('.header__nav-list').addEventListener('click', function (item) {
 //   console.log(item.target);

@@ -254,6 +254,7 @@ main {
   background-color: #2d2d2d;;
   z-index: 1;
   position: relative;
+  cursor: default;
 }
 
 .section_4__container-reds span{

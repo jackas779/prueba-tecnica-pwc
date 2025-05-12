@@ -14,6 +14,9 @@ a{
   text-decoration: none;
   color: #000;
 }
+/* .active{
+  background-color: #e0301e;
+} */
 .header{
   display: flex;
   justify-content: center;
@@ -52,6 +55,10 @@ a{
   position: relative;
 }
 
+.header__nav .icon-container{
+  display: none;
+}
+
 .header__nav-list{
   display: flex;
   gap: 1em;
@@ -79,7 +86,13 @@ a{
   transition: transform .25s ease-in-out;
 }
 
-.nav-item--list:hover::after{
+.nav-item--list.active::after {
+  background-color: #fd5108; /* Fondo rosa claro PwC */
+}
+
+
+.nav-item--list:hover::after,
+.nav-item--list.active::after{
   transform: scaleY(1);
 }
 
@@ -429,4 +442,72 @@ footer {
 
 .container_copy_rigth-copy_link a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 980px) {
+  .header__nav-list, .header_search, .header__nav_segundary-container {
+    display: none;
+  }
+  .header__nav{
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 5px;
+  }
+  .header__nav .icon-container{
+    display: flex;
+    /* background: #000; */
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+  }
+  .icon.icon-1{
+    cursor: pointer;
+  }
+  #icono_burguer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+  #icono_burguer span{
+    background-color: #000;
+    height: 2px;
+    display: inline-block;
+    width: 24px;
+  }
+  .section_1{
+    min-width: 0 !important;
+    position: initial !important;
+  }
+  .section_1__container{
+    position: initial !important;
+    padding-top: 0px !important;
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+  .section_1__container h2{
+    font-size: 1.2rem !important;
+  }
+  .section_1__container h2 em{
+    font-size: 3.5rem !important;
+    line-height: 0.5rem !important;
+  }
+  .section_1 img{
+    position: initial !important;
+  }
+  .container_about-title h4{
+    max-width: 125px;
+  }
+  #acerca_nosotros{
+    max-width: 100%;
+  }
+  .container_about-links div{
+    max-width: 95px;
+  }
+  .container_copy_rigth{
+    margin-top: 250px;
+  }
 }

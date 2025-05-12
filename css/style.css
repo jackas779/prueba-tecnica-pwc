@@ -530,8 +530,12 @@ footer {
   }
   .section_3__container{
     max-height: max-content !important;
+    flex-direction: column;
   }
   .section_3__container-text{
+    width: 100% !important;
+  }
+  .section_3__container-img{
     width: 100% !important;
   }
 
